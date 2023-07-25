@@ -1,0 +1,55 @@
+
+@import "null";
+@import "fonts";
+@import "ui";
+
+#root{
+  height: 100%;
+}
+
+body{
+  font-family: 'PTRoot';
+  color: $gray;
+  font-size: 18px;
+
+
+  
+}
+
+.container {
+  max-width: 1320px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &.hidden{
+    overflow: hidden;
+    &::before{
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: #00000072;
+      z-index: 2;
+    }
+  }
+}
+.main{
+  flex: 1 1 auto;
+}
+
+
+// .section-title{
+//   font-size: 50px;
+//   margin: 0 0 20px 0;
+//   color: $blueD;
+//   font-weight: 700;
+// }
+// .section-subtitle{
+//   font-size: 20px;
+//   line-height: 24px;
+//   margin: 0 0 50px 0;
+
+//   // color: $blueL;

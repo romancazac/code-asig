@@ -1,0 +1,41 @@
+.consultation{
+   padding: 70px 0;
+   &__title{
+      margin: 0 0 25px 0;
+   }
+   &__row{
+      display: flex;
+      // flex-wrap: wrap;
+      width: 100%;
+      gap: 20px;
+   }
+   &__column{
+      flex: 0 1 50%;
+     
+   }
+   &__text{
+      max-width: 580px;
+      line-height: 27px;
+   }
+}
+.form-cons{
+   &__line{
+      display: flex;
+      gap: 40px;
+   }
+   &__col{
+      flex: 0 1 50%;
+      .steps-form__error{
+         display: block;
+      }
+   }
+ 
+   &__inp{
+      flex: 0 1 100%;
+      width: 100% !important;
+   }
+   &__btn{
+      margin-top: 30px;
+      margin-left: auto;
+   }
+}

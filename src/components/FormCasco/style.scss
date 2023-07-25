@@ -1,0 +1,135 @@
+.steps-form{
+   display: flex;
+   gap: 30px;
+   &__title{
+      margin: 0 0 40px 0;
+   }
+   &__column{
+      flex: 0 1 50%;
+   }
+   &__row{
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      &_m{
+         margin-top: 15px;
+      }
+   }
+   &__card{
+      position: relative;
+      padding: 20px;
+      flex: 0 1 calc(33.3333% - 14px);
+      box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
+      text-align: center;
+      border-radius: 7px;
+      min-height: 137px;
+      cursor: pointer;
+      &:hover{
+         box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.08); 
+      }
+      &._active{
+         
+         &::before{
+            content: '';
+            position: absolute;
+            top: -1%;
+            left: -1%;
+            width: 101%;
+            height: 101%;
+            border-radius: 7px;
+
+           border: 1px solid $burgundy;
+         }
+         .steps-form__icon{
+            color: $burgundy;
+         }
+         .steps-form__name{
+           font-weight: 700;
+         }
+        
+      }
+   }
+   &__icon{
+      font-size: 50px;
+   }
+   &__name{
+      
+      line-height: 21px;
+      font-size: 14px;
+ 
+   }
+   &__error{
+      display: inline-block;
+      color: $burgundy;
+      margin: 15px 0;
+      font-size: 14px;
+   }
+   &__footer{
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 40px;
+   }
+   &__line{
+      margin: 0 0 20px 0;
+      &_m{
+         margin:  0 0 40px 0;
+      }
+   }
+   &__label{
+      font-family: 'Arial';
+      display: block;
+      margin: 0 0 5px 0;
+      line-height: 24px;
+   }
+   &__log{
+      display: flex;
+      gap: 10px;
+      font-family: 'Arial';
+      margin: 0 0 30px 0;
+      button{
+         color: $burgundy;
+         text-decoration: underline;
+      }
+      &_m{
+         margin-top: 30px;
+         font-size: 14px;
+      }
+   }
+   &__chk{
+ 
+      font-family: 'Arial';
+      justify-content: start !important;
+      font-size: 14px;
+      color: $black;
+      &_link{
+         a{
+            background: linear-gradient(61deg, #A40731 0%, #830B3A 40.06%, #002359 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+         }
+    
+      }
+   }
+   
+   &__btn{
+      width: 100%;
+   }
+   &__row-livration{
+      display: flex;
+      align-items: center;
+      color: $black;
+      font-family: Arial;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 48px;
+      span{
+         font-size: 20px;
+         display: flex;
+         padding-left: 60px;
+         background: url('../../assets/img/icons/24.png') left no-repeat;
+      }
+   }
+}

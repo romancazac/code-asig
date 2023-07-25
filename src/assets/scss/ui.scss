@@ -1,0 +1,255 @@
+.title{
+   font-family: Raleway;
+font-size: 28px;
+color: $black;
+font-weight: 800;
+line-height: 36px; 
+letter-spacing: 0.28px;
+&_w{
+   color: $white;
+}
+}
+._ibg{
+   position: relative;
+   img{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+
+   }
+ }
+
+.box-icon{
+   &__item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 32px;
+      color: $burgundy;
+      &:hover{
+         button, span{
+            color: $burgundy; 
+         }
+     
+      }
+   }
+   button, span{
+      font-family: 'PTRoot';
+      font-size: 14px;
+      color: $black ;
+      margin-top: 5px;
+     
+   }
+   &__row{
+      display: flex;
+      button{
+         &._active{
+            color: $burgundy;
+         }   
+         &:first-child{
+            padding-right: 8px;
+            border-right: 1px solid $grayL;
+         }
+         &:last-child{
+            padding-left: 8px;
+         }
+      }
+   }
+}
+
+@media(min-width:1500px){
+   .lines {
+      &::before, &::after{
+       content: '';
+       display: block;
+       width: 32%;
+       height: 1px;
+       background-color: $grayL;
+
+    }
+ }
+}
+
+
+.btn-block{
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 45px;
+  background-color: $white;
+  border-radius: 7px;
+  color: $gray;
+  transition: all 0.3s;
+  padding:  0 30px;
+  border: 1px solid $grayL;
+
+  &:hover{
+    opacity: 0.8;
+  }
+  span{
+   font-family: "PTRoot";
+  }
+  &_right{
+   flex-direction: row-reverse;
+   &::before{
+      transform: rotate(180deg);
+   }   
+  
+  }
+  &_arr-nbg{
+   background-color: transparent;
+   border: none;
+   color: $white;
+}
+   &_arr-red{
+      background-color: transparent;
+      border: none;
+      color: $burgundy;
+      font-weight: 700;
+   }
+  &_red{
+   background-color: $burgundy;
+   color: $white;
+  } 
+}
+
+
+.input-form {
+   width: 100%;
+   height: 45px;
+   border-radius: 7px;
+   border: 1px solid var(--gray, #E7E5E4);
+   background: var(--white, #FFF);
+   padding: 0 15px;
+   
+   &_select{
+      padding: 0;
+      .css-13cymwt-control, .css-t3ipsp-control{
+         // border: none !important;
+         border: 1px solid var(--gray, #E7E5E4);
+         min-height: 45px !important;
+         border: none !important;
+         background-color: transparent !important;
+         box-shadow: none !important;
+      }
+      .css-4xgw5l-IndicatorsContainer2{
+         display: none;
+      }
+      .react-select__option{
+         background-color: transparent !important;
+      }
+   }
+}
+
+.radio-inp{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: #948E8C;
+   cursor: pointer;
+   input {
+      display: none;
+   } 
+  
+   &__circle{
+      position: relative;
+      border: 1px solid #948E8C;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      margin-bottom: 15px;
+      transition: all 0.4s ease-in-out;
+      &::before{
+         content: '';
+         width: 0;
+         height: 0;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%,-50%);
+         transition: all 0.4s ease-in-out;
+      }
+      
+   }  
+   &__name{
+      display: block;
+      position: relative;
+      font-size: 14px;
+    
+      &::before{
+         content: '';
+         width: 1px;
+         height: 6px;
+         background-color: #948E8C;
+         position: absolute;
+         top: -10px;
+      
+         left: 50%;
+      }
+   }
+   &.checked{
+      .radio-inp__circle{
+         border-color: $burgundy;
+         &::before{
+     
+            width: 11px;
+            height: 11px;
+            background-color: $black;
+            border-radius: 50%;
+           
+         }
+      }
+     
+      .radio-inp__name{
+         color: $black;
+         &::before{
+            background-color: $black;
+         }
+      }
+   }
+   &_check{
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      .radio-inp__circle{
+         margin: 0;
+         border-radius:4px ;
+         width: 16px;
+         height: 16px;
+         &::before{
+            content: "\e903";
+            background-color: transparent !important;
+             font-family: 'icoomon' !important;
+             font-size: 0;
+
+         }
+
+      }
+      &.checked{
+         .radio-inp__circle{
+            margin: 0;
+            border-radius:4px ;
+            width: 16px;
+            height: 16px;
+            &::before{
+               font-size: 11px;
+                color: $black;  
+            }
+   
+         }
+      }
+      .radio-inp__name{
+         font-size: 18px;
+         &::before{
+            display: none;
+         }
+      }
+   }
+   
+}

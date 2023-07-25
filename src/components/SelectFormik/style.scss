@@ -1,0 +1,13 @@
+.react-select {
+
+  &__option{
+   color: inherit !important;
+   cursor: pointer !important;
+   &:hover{
+      color: $burgundy !important;
+   }
+ }
+ &__value-container{
+  padding-bottom: 4px !important;
+ }
+ }
