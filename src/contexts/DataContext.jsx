@@ -9,7 +9,7 @@ export const DataContextProvider = ({ children }) => {
 
    const [data, setData] = useState({});
    useEffect(() => {
-      getData().then((res) => setData(res[0]))
+      getData().then((res) => setData(res))
    }, [])
 
 
