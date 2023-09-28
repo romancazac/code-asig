@@ -1,15 +1,17 @@
 import { useContext, useEffect, useState } from 'react';
 import { Formik, Form  } from 'formik';
 import * as Yup from 'yup';
-import { CascoStepOne } from '../CascoStepOne';
-import { CascoStepTwo } from '../CascoStepTwo';
+
 import { StepsContext } from '../../contexts/StepsContext';
 import { Button } from '../ui/Button';
-import { CascoStepThree } from '../CascoStepThree';
+
 import { Modal } from '../Modal';
 import { ModalContext } from '../../contexts/ModalContext';
 import { ComandForm } from '../ComandForm';
 import { useAppServices } from '../../services/appServices';
+import { CascoStepOne } from '../FormCasco/CascoStepOne';
+import { CascoStepTwo } from '../FormCasco/CascoStepTwo';
+import { CascoStepThree } from '../FormCasco/CascoStepThree';
 
 
 
@@ -108,7 +110,7 @@ export const FormGreenCard = () => {
           }, [values, onTotalPrice]);
           return (
             <Form>
-
+              
               {step === 1 && <CascoStepOne values={values} />}
               {step === 2 && <CascoStepTwo values={values} />}
               {step === 3 && <CascoStepThree values={values} />}

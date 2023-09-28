@@ -1,15 +1,17 @@
 import { useContext, useEffect, useState } from 'react';
 import { Formik, Form  } from 'formik';
 import * as Yup from 'yup';
-import { CascoStepOne } from '../CascoStepOne';
-import { CascoStepTwo } from '../CascoStepTwo';
+
 import { StepsContext } from '../../contexts/StepsContext';
 import { Button } from '../ui/Button';
-import { CascoStepThree } from '../CascoStepThree';
+
 import { Modal } from '../Modal';
 import { ModalContext } from '../../contexts/ModalContext';
 import { ComandForm } from '../ComandForm';
 import { useAppServices } from '../../services/appServices';
+import { CascoStepOne } from './CascoStepOne';
+import { CascoStepTwo } from './CascoStepTwo';
+import { CascoStepThree } from './CascoStepThree';
 import './style.scss'
 
 
@@ -40,7 +42,7 @@ export const FormCasco = () => {
 
   const schemValidation = (step === 1 && stepOne) || (step === 2 && stepTwo)  || (step === 3 && stepThree) ;
 
-  const onSubmit = async (values, actions) => {
+  const onSubmit = async (values,) => {
     await postComand(values)
     // actions.resetForm(); 
     // setForm({})
@@ -108,7 +110,7 @@ export const FormCasco = () => {
           }, [values, onTotalPrice]);
           return (
             <Form>
-
+               
               {step === 1 && <CascoStepOne values={values} />}
               {step === 2 && <CascoStepTwo values={values} />}
               {step === 3 && <CascoStepThree values={values} />}
